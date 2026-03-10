@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Prom?</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+    overflow:hidden;
+}
+
+.page{
+    text-align:center;
+}
+
+h1{
+    font-size:3rem;
+    color:white;
+}
+
+#promQuestion h1,
+#areYouSure h1 {
+    color:red;
+    -webkit-text-stroke:2px #ff69b4;
+    text-stroke:2px #ff69b4;
+}
+
+button{
+    padding:15px 30px;
+    font-size:18px;
+    border:none;
+    border-radius:10px;
+    margin:5px;
+    cursor:pointer;
+    position: relative;
+    z-index: 100; 
+}
+
+#yes, #yesSure{
+    background:#4CAF50;
+    color:white;
+}
+
+#no, #noSure{
+    background:#ff4d6d;
+    color:white;
+}
+
+#no {
+    transition: 0.1s;
+}
+
+#celebration{
+    font-size:2.5rem;
+    color:white;
+    line-height: 1.2;
+}
+
+@keyframes grow {
+    0% { width: 100px; height: 100px; }
+    100% { width: 500px; height: 500px; }
+}
+
+#growingGif {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: grow 2s infinite;
+    z-index: -1;
+}
+
+#signup{
+    text-align:center;
+    background:rgba(255,255,255,0.8);
+    padding:25px;
+    border-radius:60px;
+    border:4px solid #ff69b4;
+}
+
+#flashMessage {
+    color: #ff4d6d;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+    display: none;
+}
+</style>
+</head>
+
+<body>
+
+<div id="signup" class="page">
+    <h2>State your name :]</h2>
+    <form id="signupForm">
+        <input type="text" id="nameInput" placeholder="Enter your name" required>
+        <button type="submit">Submit</button>
+    </form>
+    <img src="https://media.tenor.com/rxlKfrdNbLMAAAAj/milk-and-mocha.gif" alt="milk and mocha" style="position:fixed; top:20px; left:20px; width:312px; height:312px; z-index:10;">
+    <img src="https://media.tenor.com/kzG1i1ra1MMAAAAj/milk-hi.gif" alt="milk hi" style="position:fixed; bottom:20px; left:20px; width:312px; height:312px; z-index:10;">
+    <img src="https://media.tenor.com/ZhNxfL0GmoMAAAAj/mocha-bear-hearts.gif" alt="mocha bear hearts" style="position:fixed; top:20px; right:20px; width:312px; height:312px; z-index:10;">
+    <img src="https://media.tenor.com/dTUzNZDjA2IAAAAj/milk-and-mocha.gif" alt="milk and mocha" style="position:fixed; bottom:20px; right:20px; width:312px; height:312px; z-index:10;">
+</div>
+
+<div id="promQuestion" class="page" style="display:none;">
+    <h1>Would you want to be my Prom Partnerrr? :33</h1>
+    <div style="margin-top: 50px; display: flex; justify-content: center; align-items: center; gap: 10px;">
+        <button id="yes">YES</button>
+        <button id="no">NO</button>
+    </div>
+    <img src="https://media.tenor.com/YiE7JUKy9z4AAAAj/lguitar1.gif" alt="bear playing guitar" style="position:fixed; top:-20px; left:20px; width:350px; height:350px; z-index:10;">
+    <img src="https://media.tenor.com/vhY5yLMC9PAAAAAj/milk-and.gif" alt="milk and dancing" style="position:fixed; top:-20px; right:20px; width:298px; height:298px; z-index:10;">
+    <img src="https://media.tenor.com/Dix08_jLga0AAAAj/celebrate-mocha.gif" alt="celebrate mocha" style="position:fixed; bottom:20px; left:20px; width:298px; height:298px; z-index:10;">
+    <img src="https://media.tenor.com/rNlXwfEsh_MAAAAj/milk-and-mocha.gif" alt="milk and mocha" style="position:fixed; bottom:20px; right:20px; width:298px; height:298px; z-index:10;">
+    <img src="https://media.tenor.com/QVOgI-SY2EEAAAAm/milk-and-mocha.webp" id="growingGif" alt="milk and mocha growing">
+</div>
+
+<div id="areYouSure" class="page" style="display:none;">
+    <h1>Are you sure you dont wna go to prom with me? :<</h1>
+    <button id="yesSure">YES</button>
+    <button id="noSure">NO</button>
+    <div id="flashMessage">try clicking no again >:]}</div>
+    
+    <img src="https://media.tenor.com/CSuzjNZCugAAAAAm/milk-and-mocha.webp" style="position:fixed; top:50%; left:40px; transform:translateY(-50%); width:300px; height:300px; z-index:10;">
+    <img src="https://media.tenor.com/mNO8aMW3GB8AAAAm/milk-and-mocha-mocha.webp" style="position:fixed; top:50%; right:40px; transform:translateY(-50%); width:300px; height:300px; z-index:10;">
+</div>
+
+<div id="celebration" class="page" style="display:none;">
+    YAYAYAYAYAYAYAYAYAYY IM HONORED TO BE YOUR <br> PARTNER FOR PROMMM!!
+    <img src="https://media.tenor.com/WmUsYN4sEEoAAAAm/milk-and.webp" style="position:fixed; top:25%; left:40px; transform:translateY(-50%); width:300px; height:300px; z-index:10;">
+    <img src="https://media.tenor.com/hpgCwxnBaK8AAAAm/milk-and-mocha.webp" style="position:fixed; top:25%; right:40px; transform:translateY(-50%); width:300px; height:300px; z-index:10;">
+    <img src="https://media.tenor.com/hpgCwxnBaK8AAAAm/milk-and-mocha.webp" style="position:fixed; bottom:20px; left:50%; transform:translateX(-50%); width:300px; height:300px; z-index:10;">
+</div>
+
+<script>
+/* ---------- SIGNUP LOGIC ---------- */
+const signupForm = document.getElementById("signupForm");
+const nameInput = document.getElementById("nameInput");
+
+signupForm.addEventListener("submit", function(e){
+    e.preventDefault();
+    const name = nameInput.value.trim().toLowerCase();
+    if(name === "precious" || name === "e"){
+        document.getElementById("signup").style.display = "none";
+        document.getElementById("promQuestion").style.display = "block";
+    } else {
+        alert("tika lang, di ikaw si crushicakes >:[[");
+        nameInput.value = "";
+    }
+});
+
+/* ---------- BUTTON LOGIC ---------- */
+const yesBtn = document.getElementById("yes");
+const noBtn = document.getElementById("no");
+const yesSureBtn = document.getElementById("yesSure");
+const noSureBtn = document.getElementById("noSure");
+const flashMsg = document.getElementById("flashMessage");
+
+yesBtn.onclick = function(){
+    document.getElementById("promQuestion").style.display = "none";
+    document.getElementById("celebration").style.display = "block";
+};
+
+noBtn.onclick = function(){
+    document.getElementById("promQuestion").style.display = "none";
+    document.getElementById("areYouSure").style.display = "block";
+};
+
+// Are You Sure: YES (Confirmed rejection) -> INSTANT TRAP
+yesSureBtn.onclick = function(){
+    flashMsg.style.display = "block";
+    setTimeout(() => {
+        flashMsg.style.display = "none";
+        document.getElementById("areYouSure").style.display = "none";
+        document.getElementById("promQuestion").style.display = "block";
+        enableMovingNo(); // Instant
+    }, 1500);
+};
+
+// Are You Sure: NO (Changed mind) -> 500ms DELAYED TRAP
+noSureBtn.onclick = function(){
+    document.getElementById("areYouSure").style.display = "none";
+    document.getElementById("promQuestion").style.display = "block";
+    
+    // Give them a tiny head start since they said "No" to the rejection
+    setTimeout(enableMovingNo, 500);
+};
+
+/* ---------- MOVING NO BUTTON LOGIC ---------- */
+function moveButton() {
+    noBtn.style.position = "absolute";
+    noBtn.style.zIndex = "100"; 
+    
+    const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+    const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+}
+
+function enableMovingNo() {
+    noBtn.addEventListener("mouseover", moveButton);
+    // Move it immediately if the mouse is already there
+    if (noBtn.parentElement.querySelector(':hover') === noBtn) {
+        moveButton();
+    }
+}
+</script>
+
+</body>
+</html>
